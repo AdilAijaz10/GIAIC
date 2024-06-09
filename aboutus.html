@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./CSS/app.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <title>About Us</title>
+  <style>
+    p {
+      text-align: justify;
+    }
+
+    .flex {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .responsive1 {
+      max-width: 65%;
+    }
+
+    .responsive2 {
+      max-width: 25%;
+    }
+
+    .di-none {
+      display: flex;
+    }
+
+    .di-visible {
+      display: none;
+    }
+
+    .di-none2 {
+      display: flex;
+    }
+
+    .di-visible2 {
+      display: none;
+    }
+
+    .wid {
+      width: 100%;
+    }
+
+    @media (max-width: 425px) {
+      .wid {
+        width: 50%;
+      }
+    }
+
+    @media screen and (min-width: 425px) and (max-width: 768px) {
+      .wid {
+        width: 40%;
+      }
+    }
+
+
+    @media (max-width: 768px) {
+      .flex {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .responsive1 {
+        max-width: 100%;
+      }
+
+      .responsive2 {
+        max-width: 100%;
+      }
+
+      .di-none {
+        display: none;
+      }
+
+      .di-visible {
+        display: flex;
+      }
+
+      .di-none2 {
+        display: none;
+      }
+
+      .di-visible2 {
+        display: flex;
+      }
+
+    }
+  </style>
+</head>
+
+<body class="text-dark">
+  <!-- loader -->
+  <div id="loader" class="text-center  " style="right: 0;">
+    <div class="flex bg-grb w-100 h-100">
+      <img src="./images/Logo/AR.png" alt="" class="pump" width="150px">
+    </div>
+  </div>
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top" style="z-index: 99 !important;">
+      <div class=" container">
+        <a class="navbar-brand" href="./index.html">
+          <img src="./images/Logo/AR.png" alt="logo" height="60">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./3DModels.html">3D Models</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Lectures
+              </a>
+              <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="./lecture1.html">Lecture 1</a></li>
+                <li><a class="dropdown-item" href="./lecture2.html">Lecture 2</a></li>
+                <li><a class="dropdown-item" href="./lecture3.html">Lecture 3</a></li>
+                <!--
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                 <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./aboutus.html">About Us</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <div class="mainbody pt-5 my-5 px-4 px-md-5" style="display: flex; justify-content: center;">
+
+    <div class="col-md-9 mt-3">
+
+      <div class="text-center">
+        <div class="text-center">
+          <h3 class="m-0">About Us</h3>
+          <p class="" style="text-align: justify;">The main goal of our AR-Based computer fundamentals App is to help
+            students visualize hardware components and devices of computer in 3D using AR technology. These hardware
+            devices
+            and components are present in the computer fundamentals course that students study in their first semester
+            of
+            BS
+            Computer Engineering. Nowadays, traditional education methods lack interactivity and engagement with
+            students.
+            This lack of interaction decrease students interest in the Computer Fundamentals subject. Apart from this,
+            most
+            educational institutions don't offer physical access to the computer components and devices. Due to which,
+            students are not able to get practical experience of the computer components and devices.
+            Our AR-CF app solves all these issues by providing students with 3d visualizations of computer components
+            and
+            devices in their mobile phones. Students can also interact with these 3D models using fingers gestures. They
+            can
+            rotate and zoom the 3d models any way they want. With AR-CF application, they don't need physical access to
+            these costly devices and components, so our solution is also very cost effective while also providing
+            students
+            with free access to internal components of computer.</p>
+        </div>
+
+        <div class="text-center" style="display: flex; flex-direction: column; align-items: center;">
+          <h3>Meet Our Team</h3>
+          <p style="text-align: justify;">
+            Our team consists of four talented individuals, each bringing a unique set of skills and expertise to the
+            table.Together, we form a dynamic and collaborative unit committed to turning innovative ideas into reality.
+            Get to know us better by contacting us!
+          </p>
+          <div class="row w-100 my-0 my-md-2">
+            <div class="w-100 flex p-0  my-md-1 my-3" style="justify-content: space-between;">
+              <div class="responsive1 di-none" style="align-items: center;">
+                <p>I am graduating from SSUET in BS Computer Engineering. During my FYP, I worked as Unity developer
+                  writing C# scripts for 3d models interactions and smooth visualizations. I am also web developer so, I
+                  also worked on developing AR-CF website. I also helped in the successful integration of the AR-CF
+                  application in the unity.</p>
+              </div>
+              <div class="text-center responsive2" style="display: flex; flex-direction: column;">
+                <div class="" style="max-width: 100%; ">
+                  <img src="./images/individuals/1.jpg" style="border-radius: 50%; aspect-ratio: 8/8;" class="wid"
+                    alt="zahir">
+                </div>
+                <div class="" style="display: flex; flex-direction:column; align-items: center">
+                  <p class="m-0">Zahir Khan</p>
+                  <p class="m-0">zahir9048@gmail.com</p>
+                </div>
+              </div>
+              <div class="responsive1 di-visible" style="align-items: center;">
+                <p>I am graduating from SSUET in BS Computer Engineering. During my FYP, I worked as Unity developer
+                  writing C# scripts for 3d models interactions and smooth visualizations. I am also web developer so, I
+                  also worked on developing AR-CF website. I also helped in the successful integration of the AR-CF
+                  application in the unity.</p>
+              </div>
+            </div>
+
+
+            <div class="w-100 flex p-0 my-md-1 my-3" style="justify-content: space-between;">
+
+              <div class="text-center responsive2" style="display: flex; flex-direction: column;">
+                <div class="" style="max-width: 100%; ">
+                  <img src="./images/individuals/2.jpg"
+                    style="border-radius: 50%; aspect-ratio: 8/8; object-fit: cover;" class="wid" alt="zahir">
+                </div>
+                <div class="" style="display: flex; flex-direction:column; align-items: center">
+                  <p class="m-0">Ramish Masood</p>
+                  <p class="m-0">ramishmasood3@gmail.com</p>
+                </div>
+              </div>
+              <div class="responsive1" style=" align-items: center;">
+                <p>I am graduating from SSUET in BS Computer Engineering. I am a UI/UX Designer & WordPress developer.
+                  So, I designed the UI of the AR-CF application and also applied textures on the 3D models. I also
+                  worked as Unity developer integrating different
+                  modules of the AR-CF application.</p>
+              </div>
+            </div>
+
+            <div class="w-100 flex p-0 my-md-1 my-3" style=" justify-content: space-between;">
+              <div class="responsive1 di-none" style=" align-items: center;">
+                <p>I am graduating from SSUET in BS Computer Engineering. I am 3D models designer. I used Blender to
+                  design 3d models of computer components along with Qasim. I also worked on the documentation of the
+                  AR-CF.</p>
+              </div>
+              <div class="text-center responsive2" style="display: flex; flex-direction: column;">
+                <div class="" style="max-width: 100%; ">
+                  <img src="./images/individuals/3.jpg" style="border-radius: 50%; aspect-ratio: 8/8;" class="wid"
+                    alt="zahir">
+                </div>
+                <div class="" style="display: flex; flex-direction:column; align-items: center">
+                  <p class="m-0">Adil Aijaz</p>
+                  <p class="m-0">adilaijaz10@gmail.com</p>
+                </div>
+              </div>
+              <div class="responsive1 di-visible" style=" align-items: center;">
+                <p>I am graduating from SSUET in BS Computer Engineering. I am 3D models designer. I used Blender to
+                  design 3d models of computer components along with Qasim. I also worked on the documentation of the
+                  AR-CF.</p>
+              </div>
+            </div>
+
+
+            <div class="w-100 flex p-0 my-md-1 my-3" style="justify-content: space-between;">
+              <div class="text-center responsive2" style="display: flex; flex-direction: column;">
+                <div class="" style="max-width: 100%; ">
+                  <img src="./images/individuals/4.jpg"
+                    style="border-radius: 50%; aspect-ratio: 8/8; object-fit: cover;" class="wid" alt="zahir">
+                </div>
+                <div class="" style="display: flex; flex-direction:column; align-items: center">
+                  <p class="m-0">Qasim</p>
+                  <p class="m-0">qhassan607@gmail.com</p>
+                </div>
+              </div>
+              <div class="responsive1" style=" align-items: center;">
+                <p>I am graduating from SSUET in BS Computer Engineering. I am also 3D models designer. I used Blender
+                  to design 3d models of computer components along with Adil AIjaz. I also worked on the documentation
+                  of
+                  the AR-CF. Apart from these skills, I am also a Web developer.</p>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <script src="./JS/jquery-3.6.3.min.js"></script>
+
+  <script>
+    $(document).ready(() => {
+      document.body.style.overflowY = 'hidden';
+      window.scrollTo(0, 0);
+      setTimeout(hideLoader, 2000);
+    });
+
+    function hideLoader() {
+      document.getElementById('loader').style.display = 'none';
+      document.body.style.overflowY = 'auto';
+    }
+
+
+  </script>
+</body>
+
+</html>

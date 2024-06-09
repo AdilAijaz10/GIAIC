@@ -1,0 +1,146 @@
+:root {
+  --seagreen: #00314c;
+  --blue: #3f417c;
+  --greenblue: #009697;
+}
+
+/* Style the header with a grey background and some padding */
+.header {
+  overflow: hidden;
+  background-color: rgb(176, 176, 176);
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* Style the header links */
+.header a {
+  color: black;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  border: 2px solid rgb(161, 161, 161);
+  margin: 0px 5px;
+  transition: background-color 0.35s ease-in;
+}
+
+.heading {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  padding: 0px 12px;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  background-color: rgb(23, 154, 206);
+  color: rgb(255, 255, 255);
+}
+
+
+
+/* Style the active/current link*/
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Float the link section to the right */
+.header-right {
+  width: 33%;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 13px;
+}
+
+
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header-right {
+    float: none;
+  }
+}
+
+
+#carouselExampleIndicators {
+  margin: 0 auto;
+
+}
+
+.pdframe {
+  height: 900px;
+}
+
+
+.pdf-embed {
+  width: 100%;
+  /* Set the width to 100% to fit the container */
+  max-width: 100%;
+  /* Ensure the PDF does not exceed the container's width */
+}
+
+#loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  height: 100vh;
+  width: 100vw;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-grb {
+  background-color: var(--seagreen) !important;
+}
+
+
+.pump {
+  animation: beat 1.5s linear infinite;
+}
+
+@keyframes beat {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+
+@media (max-width:767px) {
+  .snav {
+    display: none !important;
+  }
+
+  .mob {
+    display: block !important;
+  }
+
+  html,
+  body {
+    /* overflow-y: hidden !important; */
+    overflow-x: hidden !important;
+  }
+}

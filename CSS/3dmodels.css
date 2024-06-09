@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:weight@100;200;300;400;500;600;700;800&display=swap");
+
+/* .image img {
+    width: 100%;
+    height: 300px;
+} */
+
+
+/*  */
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.crd:hover {
+    box-shadow: 3px 3px 7px 0px #000;
+}
+
+.crd:hover .imageDiv img {
+    transform: scale(1.1);
+    transition: .5s linear;
+}
+
+.crd:hover .imageDiv.card {
+    border: 2px solid #000 !important;
+    transition: .2s;
+}
+
+.imageDiv img {
+    transform: scale(1);
+    transition: .1s linear;
+    max-width: 100%;
+}
+
+.overlays {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 4;
+    display: none;
+
+}
+
+.imageDiv {
+    overflow: hidden;
+}
+
+.crd:hover .overlays {
+    display: block;
+}
+
+.pc {
+    height: 300px;
+    background-color: yellow;
+}
+
+
+
+/*  */
+.image {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.image .overlay {
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    z-index: 5;
+    opacity: 0;
+    /* Initially hide the overlay */
+    transition: opacity 0.3s;
+    /* Add a smooth transition */
+}
+
+.image .overlay::before {
+    content: "";
+    background: rgb(23, 154, 206);
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    /*-150px original*/
+    z-index: -2;
+    opacity: 0.95;
+    transition: all 0.3s ease-out;
+}
+
+.image:hover .overlay {
+    color: rgb(0, 0, 0);
+    opacity: 1;
+
+    /* Display the overlay when hovering */
+}
+
+.container .image:hover .overlay .h4,
+.container .image:hover .overlay .textmuted {
+    color: rgb(0, 0, 0);
+}
+
+
+.image:hover .overlay::before {
+    bottom: 0px;
+}
+
+.image:hover {
+    box-shadow: 4px 4px 4px 1px #5c5555a6;
+}
+
+.textmuted {
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    font-size: 15px;
+    text-align: justify;
+}
+
+.row h4 {
+    text-align: center;
+}
+
+.row .color {
+    background-color: rgb(209, 209, 209);
+}
+
+.search {
+    position: relative;
+    box-shadow: 0 0 40px rgba(51, 51, 51, .1);
+
+}
+
+.search input {
+
+    height: 60px;
+    text-indent: 25px;
+    border: 2px solid #d6d4d4;
+}
+
+.search input:focus {
+    box-shadow: none;
+    border: 2px solid blue;
+}
+
+.search .fa-search {
+    position: absolute;
+    top: 20px;
+    left: 16px;
+
+}
+
+.search button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 50px;
+    width: 110px;
+    background: blue;
+}
+
+.clear-button {
+    position: absolute;
+    right: 80px;
+    /* Adjust this value to position the icon where you want */
+    top: 50%;
+    /* Adjust this value to vertically center the icon */
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+    /* Ensure the icon is above the input */
+    color: #000;
+    /* Set the color of the icon */
+}

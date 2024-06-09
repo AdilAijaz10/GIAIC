@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/app.css">
+    <link rel="stylesheet" href="./CSS/3dmodels.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>3D Models</title>
+</head>
+
+<body class="text-dark">
+    <!-- loader -->
+    <div id="loader" class="text-center">
+        <div class="flex bg-grb w-100 h-100">
+            <img src="./images/Logo/AR.png" alt="" class="pump" width="150px">
+        </div>
+    </div>
+
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top" style="z-index: 99 !important;">
+            <div class="container">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./images/Logo/AR.png" alt="logo" height="60">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./3DModels.html">3D Models</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Lectures
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="./lecture1.html">Lecture 1</a></li>
+                                <li><a class="dropdown-item" href="./lecture2.html">Lecture 2</a></li>
+                                <li><a class="dropdown-item" href="./lecture3.html">Lecture 3</a></li>
+                                <!--
+                              <li>
+                                <hr class="dropdown-divider">
+                              </li>
+                               <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./aboutus.html">About Us</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="mainbody mt-5 pt-5">
+
+        <div class="px-0 mx-0 mt-4 mb-4 row height d-flex justify-content-center align-items-center">
+
+            <div class="col-11 col-sm-12 col-md-10">
+                <div class="input-group mb-3">
+                    <div class="input-group-text p-0">
+                        <select id="category-filter" style="cursor: pointer;"
+                            class="form-select form-select-sm shadow-none bg-light border-1">
+                            <option value="all">All</option>
+                            <option value="component">Components</option>
+                            <option value="peripheral">Peripherals</option>
+                            <option value="network">Network</option>
+                            <option value="interfaces">Interface</option>
+                            <option value="other">Others</option>
+                        </select>
+                    </div>
+                    <input style="z-index: 0;" type="text" id="search" class="form-control clear-block"
+                        placeholder="Search 3D Models">
+                    <div class="clear-button" id="clear-search"><i class="fas fa-times"></i></div>
+                    <button id="search-btn" class="input-group-text shadow-none px-4 btn-success">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="container col-11 col-sm-12 col-md-10" style="justify-content: center;">
+                <div id="no-results" style="display: none; text-align: center; font-weight: bold;"></div>
+
+                <div class="row flex" id="parent">
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box peripheral network all">
+                        <a class="text-decoration-none" href="./3dModels/NIC.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">Network Interface Card
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/NIC.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">Network Interface Card
+                                    </h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box peripheral all">
+                        <a class="text-decoration-none" href="./3dModels/PalmOS.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">Palm OS</h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/PalmOS.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">Palm OS</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box network all">
+                        <a class="text-decoration-none" href="./3dModels/WirelessAdapter.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">Wireless Adapter</h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/Wireless Adapter.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">Wireless Adapter</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box network all">
+                        <a class="text-decoration-none" href="">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">Wireless Access Point</h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/Wireless Access Point.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">Wireless Access Point</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box network all">
+                        <a class="text-decoration-none" href="./3dModels/Wifi Router.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">Wifi Router
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/Wifi Router.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">Wifi Router
+                                    </h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box network all">
+                        <a class="text-decoration-none" href="./3dModels/Modem.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">Modem</h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/Modem.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">Modem</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box network all">
+                        <a class="text-decoration-none" href="./3dModels/Wireless Access Point.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">Router</h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/Wireless Access Point.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">Router</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box other all">
+                        <a class="text-decoration-none" href="./3dModels/Laptop.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">Laptop</h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/Laptop.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">Laptop</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box other all">
+                        <a class="text-decoration-none" href="./3dModels/Computer.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">Computer
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/Computer.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">Computer
+                                    </h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box other all">
+                        <a class="text-decoration-none" href="./3dModels/MiniComputer.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">Mini Computer</h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/Mini Computer.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">Mini Computer</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box other all">
+                        <a class="text-decoration-none" href="./3dModels/Mainframe.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">Mainframe</h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/Mainframe.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">Mainframe</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box other all">
+                        <a class="text-decoration-none" href="./3dModels/Super Computer.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">Super Computer</h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/Super Computer.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">Super Computer</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box other all">
+                        <a class="text-decoration-none" href="./3dModels/PDA.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">PDA
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/PDA.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">PDA
+                                    </h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box component all">
+                        <a class="text-decoration-none" href="./3dModels/LCD.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">LCD</h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/LCD.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">LCD</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box component all">
+                        <a class="text-decoration-none" href="./3dModels/CRT.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">CRT</h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/CRT.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">CRT</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box component all">
+                        <a class="text-decoration-none" href="./3dModels/CPU.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">CPU</h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/CPU.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">CPU</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box component all">
+                        <a class="text-decoration-none" href="./3dModels/Motherboard.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">Motherboard
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/Motherboard.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">Motherboard
+                                    </h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box interfaces all">
+                        <a class="text-decoration-none" href="./3dModels/Ports.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">CPU Ports</h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/Ports.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">CPU Ports</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box component all">
+                        <a class="text-decoration-none" href="./3dModels/RAM.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">RAM</h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/RAM.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">RAM</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box component all">
+                        <a class="text-decoration-none" href="./3dModels/Video Controller.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">Video Controller</h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/Video Controller.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">Video Controller</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box component all">
+                        <a class="text-decoration-none" href="./3dModels/Processor.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">Processor
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/Processor.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">Processor
+                                    </h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box component all">
+                        <a class="text-decoration-none" href="./3dModels/Hard Disk.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">Hard Disk</h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/Hard Disk.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">Hard Disk</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box other all">
+                        <a class="text-decoration-none" href="./3dModels/Touch Screen.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">Touch Screen</h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/Touch Screen.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">Touch Screen</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box peripheral all">
+                        <a class="text-decoration-none" href="./3dModels/Trackball.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">Trackball</h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/Trackball.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">Trackball</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box peripheral all">
+                        <a class="text-decoration-none" href="./3dModels/Joystick.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">Joystick
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/Joystick.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">Joystick
+                                    </h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box peripheral all">
+                        <a class="text-decoration-none" href="./3dModels/Touchpad.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">Touchpad</h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/Touchpad.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">Touchpad</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box peripheral all">
+                        <a class="text-decoration-none" href="./3dModels/KeyboardMouse.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">Keyboard & Mouse</h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/KeyboardMouse.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">Keyboard & Mouse</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box other all">
+                        <a class="text-decoration-none" href="./3dModels/Graphics Tablet.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">Graphics Tablet</h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/Graphics Tablet.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">Graphics Tablet</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box peripheral all">
+                        <a class="text-decoration-none" href="./3dModels/CD.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">CD
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/CD.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">CD
+                                    </h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box peripheral all">
+                        <a class="text-decoration-none" href="./3dModels/Printer.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">Printer</h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/Printer.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">Printer</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box peripheral all">
+                        <a class="text-decoration-none" href="./3dModels/Plotter.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">Plotter</h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/Plotter.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">Plotter</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box peripheral all">
+                        <a class="text-decoration-none" href="./3dModels/Portable HDD.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">Portable Hard Drive</h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/Portable HDD.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">Portable Hard Drive</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box peripheral all">
+                        <a class="text-decoration-none" href="./3dModels/Floppy Disk.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">Floppy Disk
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/Floppy Disk.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">Floppy Disk
+                                    </h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box peripheral all">
+                        <a class="text-decoration-none" href="./3dModels/Zip Disk Drive.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">Zip Disk Drive</h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/Zip DIsk Drive.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">Zip Disk Drive</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box network all">
+                        <a class="text-decoration-none" href="./3dModels/ISDN.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">ISDN Communication</h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/ISDN.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">ISDN Communication</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box network all">
+                        <a class="text-decoration-none" href="./3dModels/Wireless LAN.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">Wireless LAN</h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/LAN.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">Wireless LAN</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box network all">
+                        <a class="text-decoration-none" href="./3dModels/CommNetwork.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">Communication Network</h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/Comm Network.png" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">Communication Network</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 py-2 mainD box network all">
+                        <a class="text-decoration-none" href="./3dModels/Network.html">
+                            <div class="card crd p-2 pc" style="height: 350px;">
+                                <div class="imageDiv card flex" style="height: 75%;">
+                                    <div class="overlays text-light  w-100 h-100 ">
+                                        <div class="flex w-100 h-100">
+                                            <h5 class="fw-bold">Network</h5>
+                                        </div>
+                                    </div>
+                                    <img src="images/3D Models images/Network.jpeg" alt="">
+                                </div>
+                                <div class="name textDiv text-capitalize text-center flex" style="height: 25%;">
+                                    <h3 class="name">Network</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="./JS/jquery-3.6.3.min.js"></script>
+    <script src="./JS/script.js"></script>
+
+    <script>
+        $(document).ready(() => {
+            document.body.style.overflowY = 'hidden';
+            window.scrollTo(0, 0);
+            setTimeout(hideLoader, 2000);
+        });
+
+        function hideLoader() {
+            document.getElementById('loader').style.display = 'none';
+            document.body.style.overflowY = 'auto';
+        }
+
+
+    </script>
+</body>
+
+</html>
