@@ -1,4 +1,4 @@
-# FYP-Website
+# ARCF-Website
 This repository contains code of our FYP Webiste.
 
 Link of our FYP Website: https://webcf.netlify.app/
